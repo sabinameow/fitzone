@@ -1,5 +1,4 @@
-// ========== SMOOTH SCROLLING (Плавная прокрутка) ==========
-// Когда кликаем на ссылку, страница плавно прокручивается к нужной секции
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -10,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
             
-            // Закрыть мобильное меню после клика
+
             const navbarCollapse = document.querySelector('.navbar-collapse');
             if (navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
@@ -19,8 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== NAVBAR SCROLL EFFECT (Эффект при прокрутке навигации) ==========
-// Меняет фон навигации когда прокручиваем страницу
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -32,8 +30,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ========== SCROLL TO TOP BUTTON (Кнопка "наверх") ==========
-// Показывает кнопку когда прокручиваем вниз
 const scrollTopBtn = document.getElementById('scrollTop');
 
 window.addEventListener('scroll', function() {
@@ -44,7 +40,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// При клике на кнопку - возвращаемся наверх
+
 scrollTopBtn.addEventListener('click', function() {
     window.scrollTo({
         top: 0,
@@ -52,22 +48,18 @@ scrollTopBtn.addEventListener('click', function() {
     });
 });
 
-// ========== CONTACT FORM HANDLING (Обработка формы) ==========
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Показать сообщение об успехе
-        alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
-        
-        // Очистить форму
+        alert('Thank you for your message! We will get in touch with you shortly.');
+      
         contactForm.reset();
     });
 }
 
-// ========== ACTIVE MENU ITEM ON SCROLL (Активный пункт меню) ==========
-// Подсвечивает текущую секцию в меню при прокрутке
+
 window.addEventListener('scroll', function() {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -89,8 +81,7 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// ========== ANIMATION ON SCROLL (Анимация при прокрутке) ==========
-// Карточки появляются с анимацией когда прокручиваем до них
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -105,7 +96,6 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Анимация для всех карточек
 const cards = document.querySelectorAll('.program-card, .service-card, .coach-card, .pricing-card, .contact-info-card');
 cards.forEach(card => {
     card.style.opacity = '0';
@@ -114,8 +104,6 @@ cards.forEach(card => {
     observer.observe(card);
 });
 
-// ========== LOADING ANIMATION (Анимация загрузки) ==========
-// Плавное появление страницы при загрузке
 window.addEventListener('load', function() {
     document.body.style.opacity = '0';
     setTimeout(function() {

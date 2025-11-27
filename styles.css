@@ -1,11 +1,9 @@
 
 
 .coach-photo {
-    /* ... */
-    object-position: center 30%; /* Горизонтально по центру, вертикально на 30% от верха */
+    object-position: center 30%; 
 }
 
-/* ========== CSS ПЕРЕМЕННЫЕ ========== */
 :root {
     --primary-color: #ef4444;
     --secondary-color: #1f2937;
@@ -17,7 +15,6 @@
     --transition: all 0.3s ease;
 }
 
-/* ========== ОБЩИЕ СТИЛИ ========== */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +41,6 @@ img {
     height: auto;
 }
 
-/* ========== ТИПОГРАФИЯ ========== */
 .section-label {
     display: inline-block;
     color: var(--primary-color);
@@ -63,7 +59,6 @@ img {
     text-transform: uppercase;
 }
 
-/* ========== НАВИГАЦИЯ ========== */
 .navbar {
     background: rgba(17, 24, 39, 0.95);
     backdrop-filter: blur(10px);
@@ -108,7 +103,7 @@ img {
     color: var(--white) !important;
 }
 
-/* ========== HERO СЕКЦИЯ ========== */
+
 .hero-section {
     position: relative;
     height: 100vh;
@@ -119,7 +114,7 @@ img {
     overflow: hidden;
 }
 
-/* Стили для видео */
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -130,7 +125,6 @@ img {
     z-index: 0;
 }
 
-/* Затемнение поверх видео */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -176,7 +170,7 @@ img {
     max-width: 500px;
 }
 
-/* ========== О НАС ========== */
+
 .about-section {
     background: var(--white);
 }
@@ -196,7 +190,6 @@ img {
     margin-right: 10px;
 }
 
-/* ========== СТАТИСТИКА ========== */
 .stats-section {
     background: var(--primary-color);
     padding: 40px;
@@ -220,7 +213,6 @@ img {
     letter-spacing: 1px;
 }
 
-/* ========== ПРОГРАММЫ ========== */
 .programs-section {
     background: var(--light-bg);
 }
@@ -293,7 +285,6 @@ img {
     color: #dc2626;
 }
 
-/* ========== УСЛУГИ ========== */
 .services-section {
     background: var(--white);
 }
@@ -351,7 +342,6 @@ img {
     font-size: 14px;
 }
 
-/* ========== ТРЕНЕРЫ ========== */
 .coaches-section {
     background: var(--light-bg);
 }
@@ -427,7 +417,7 @@ img {
     color: var(--white);
 }
 
-/* ========== РАСПИСАНИЕ ========== */
+
 .schedule-section {
     background: var(--white);
 }
@@ -505,7 +495,6 @@ img {
     border-left: 4px solid var(--primary-color);
 }
 
-/* ========== ЦЕНЫ ========== */
 .pricing-section {
     background: var(--light-bg);
 }
@@ -583,7 +572,7 @@ img {
     margin-right: 10px;
 }
 
-/* ========== ОТЗЫВ ========== */
+
 .testimonial-section {
     padding: 60px 0;
 }
@@ -631,7 +620,6 @@ img {
     opacity: 0.9;
 }
 
-/* ========== КОНТАКТЫ ========== */
 .contact-section {
     background: var(--white);
 }
@@ -696,7 +684,6 @@ img {
     box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-/* ========== ФУТЕР ========== */
 .footer {
     background: var(--dark-bg);
     color: var(--white);
@@ -791,7 +778,6 @@ img {
     color: #9ca3af;
 }
 
-/* ========== КНОПКА НАВЕРХ ========== */
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -820,7 +806,6 @@ img {
     display: flex;
 }
 
-/* ========== КНОПКИ ========== */
 .btn-primary {
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
@@ -855,9 +840,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* ========== АДАПТИВНОСТЬ ========== */
-
-/* Планшеты */
 @media (max-width: 992px) {
     .section-title {
         font-size: 32px;
@@ -886,7 +868,7 @@ img {
     }
 }
 
-/* Мобильные телефоны */
+
 @media (max-width: 768px) {
     section {
         padding: 60px 0;
@@ -941,7 +923,7 @@ img {
     }
 }
 
-/* Очень маленькие экраны */
+
 @media (max-width: 576px) {
     .hero-title {
         font-size: 32px;
